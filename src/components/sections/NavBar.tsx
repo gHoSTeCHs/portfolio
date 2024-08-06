@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import Button from "../ui/button";
+import { cn } from '@/lib/utils';
 import Image from "next/image";
 import images from "@/constants";
 import { usePathname, useRouter } from "next/navigation";
@@ -8,8 +9,8 @@ import Link from "next/link";
 import { navLinks } from "@/constants/data";
 
 const NavBar = () => {
-  const router = useRouter();
-  const pathName = usePathname()
+    const pathname = usePathname();
+	const router = useRouter();
   return (
     <div className="border-b border-background-tertiary">
       <div className="container">
@@ -23,15 +24,25 @@ const NavBar = () => {
             />{" "}
           </div>
           <ul className="flex items-center border border-background-tertiary border-b-0 rounded-tr-[10px] rounded-tl-[10px] overflow-hidden">
-            {navLinks.map((link) => (
-              <Link
-                className="bg-background-secondary px-[30px] py-[24px]"
-                key={link.path}
-                href={link.path}
-              >
-                {link.title}
-              </Link>
-            ))}
+          {navLinks.map(({ path, title}) => {
+							const isActive =
+								pathname === path || pathname.startsWith(`${path}/`);
+
+							return (
+                                <Link
+                                className={cn(
+										'px-[30px] text-sm py-[24px] hover:bg-background-secondary/30',
+										{
+											'bg-background-secondary transition-all hover:bg-background-secondary/70 ': isActive,
+										}
+									)}
+                                key={path}
+                                href={path}
+                                >
+                                {title}
+                                </Link>
+							);
+						})}
           </ul>
           <Button> Contact Me </Button>
         </nav>
@@ -41,3 +52,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

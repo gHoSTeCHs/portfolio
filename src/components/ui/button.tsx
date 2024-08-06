@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({
     className,
     ...props
 }) => {
-    const baseStyles = 'px-4 py-4 text-[14px] max-h-[49px] rounded-md focus:outline-none transition duration-150';
+    const baseStyles = 'px-4 py-3 text-[14px] rounded-md focus:outline-none transition duration-150';
     const variantStyles = {
         primary: 'bg-background-secondary text-white hover:bg-background-tertiary',
         secondary: 'bg-btn text-white hover:bg-gray-600',
