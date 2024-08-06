@@ -23,6 +23,7 @@ const config: Config = {
         background: '#070708',
         'background-secondary': '#131316',
         'background-tertiary': '#1C1C1C',
+        'txt': '#62646C',
         foreground: '#E4E4E6',
         'txt-secondary': '#AFB0B6',
         'txt-tertiary': '#D6D0FB',
