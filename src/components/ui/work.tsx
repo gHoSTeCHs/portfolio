@@ -1,9 +1,14 @@
+import Image from 'next/image'
 import React from 'react'
+import Button from './button'
+import { ArrowUpRight } from 'lucide-react';
 
-const work = () => {
+const Work = () => {
   return (
-    <div>work</div>
+    <div>
+      LETS <ArrowUpRight claass\\/> WORK TOGETHER
+    </div>
   )
 }
 
-export default work
+export default Work
