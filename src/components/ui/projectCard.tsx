@@ -6,12 +6,13 @@ interface ProfileCardProps {
 	title: string;
 	date: string;
 	link: string;
+	image: string;
 }
 
-const ProjectCard: React.FC<ProfileCardProps> = ({ title, date, link }) => {
+const ProjectCard: React.FC<ProfileCardProps> = ({ title, date, link, image }) => {
 	return (
 		<div>
-			<Image src={''} alt="Project Image" />
+			<Image src={image} alt="Project Image" />
 			<div>
 				<div>
 					<h3>{title}</h3>

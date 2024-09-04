@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import SectionHeader from "../ui/sectionHeader";
 import images from "@/constants";
 import Image from "next/image";
+import Carousel from "../ui/carousel";
 
 const PortfolioSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,20 +21,17 @@ const PortfolioSection = () => {
         details="Portfolio"
         btntext="View All My Works"
       />
-      <div className="py-10 ">
-        <Image
-          src={slides[currentSlide]}
-          alt="Project Image"
-          className={` ${
-            slides[currentSlide]
-              ? "opacity-100 transition-opacity duration-500 ease-in-out"
-              : "opacity-0"
-          }`}
-        />
-        <div>
-          <button onClick={prevslide}>Prev</button>
-          <button onClick={nextslide}>Next</button>
-        </div>
+      <div className="py-10 max-w-lg mx-auto ">
+        <Carousel>
+          {slides.map((slide, index) => (
+            <div className="w-full h-full" key={index}>
+              <Image src={slide} alt="Project Image" className="w-full h-full object-cover" />
+            </div>
+            
+          ))}
+        </Carousel>
+
+        
       </div>
     </section>
   );

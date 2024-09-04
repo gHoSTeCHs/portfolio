@@ -1,3 +1,5 @@
+import images from "./images";
+
 export const navLinks = [
   {
     title: "Home",
@@ -112,5 +114,26 @@ export const FooterLinks = [
         link: "/",
       },
     ],
+  },
+];
+
+export const PortfolioProjects = [
+  {
+    title: "Faces of Resilience",
+    img: images.projectImg1,
+    date: "March 2022",
+    link: "#",
+  },
+  {
+    title: "A Wedding Tale",
+    img: images.projectImg2,
+    date: "January 2020",
+    link: "#",
+  },
+  {
+    title: "Product Elegance",
+    img: images.projectImg3,
+    date: "January 2020",
+    link: "#",
   },
 ];

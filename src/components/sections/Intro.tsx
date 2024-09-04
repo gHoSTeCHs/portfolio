@@ -8,7 +8,7 @@ const Intro = () => {
 		<section>
 			<div className="container py-7 md:py-14">
 				<div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:gap-0 lg:justify-between">
-					<Header title="DAMIEN BRAUN" details="Stunning Photography by" />
+					<Header title="somadina" details="Creative development by" />
 					<Work />
 				</div>
 			</div>

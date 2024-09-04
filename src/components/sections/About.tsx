@@ -11,7 +11,7 @@ const About = () => {
 		<section className="container">
 			<div className="">
 				<div className="flex flex-col gap-5 border border-x-0 border-t-0 border-background-tertiary py-5 md:flex-row md:items-center md:justify-between md:gap-0">
-					<Header title="I AM DAMIEN" details="About" />
+					<Header title="I AM SOMADINA" details="About" />
 					<div className="inline-block">
 						<Button>{'Know More ->'}</Button>
 					</div>
