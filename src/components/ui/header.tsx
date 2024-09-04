@@ -8,10 +8,8 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, details }) => {
 	return (
 		<div className="flex flex-col gap-[4px]">
-			<p className="text-[14px] text-txt capitalize md:text-[16px]">
-				{details}
-			</p>
-			<h1 className="text-4xl md:text-6xl leading-normal p-0 font-semibold">
+			<p className="text-[14px] uppercase text-txt md:text-[16px]">{details}</p>
+			<h1 className="text-4xl uppercase md:text-6xl leading-normal p-0 font-semibold">
 				{title}
 			</h1>
 		</div>
