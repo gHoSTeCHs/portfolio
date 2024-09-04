@@ -7,7 +7,7 @@ const PortfolioSection = () => {
 			<SectionHeader
 				title="Explore My photography work."
 				details="Portfolio"
-				btntext="View All Works"
+				btntext="View All My Works"
 			/>
 			<div className="py-10"></div>
 		</section>
