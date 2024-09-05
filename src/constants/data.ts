@@ -136,4 +136,10 @@ export const PortfolioProjects = [
     date: "January 2020",
     link: "#",
   },
+  {
+    title: "Faces of Resilience",
+    img: images.projectImg1,
+    date: "March 2022",
+    link: "#",
+  },
 ];
